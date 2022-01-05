@@ -193,7 +193,7 @@ func NewMERegion(buf []byte, r *FlashRegion, rt FlashRegionType) (Region, error)
 	copy(rr.buf, buf)
 	fp, err := NewMEFPT(buf)
 	if err != nil {
-		log.Errorf("error parsing ME Flash Partition Table: %v", err)
+		// log.Errorf("error parsing ME Flash Partition Table: %v", err)
 		return rr, nil
 	}
 	rr.FPT = fp
